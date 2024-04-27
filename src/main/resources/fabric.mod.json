@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "advanced-structure-generator",
+	"version": "${version}",
+	"name": "Advanced Structure Generator",
+	"description": "This mod allows you to generate large buildings from smaller rooms. Hope it will be useful for someone",
+	"authors": [
+		"Olegogonich"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/advanced-structure-generator/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"structure.generator.AdvancedStructureGenerator"
+		],
+		"client": [
+			"structure.generator.AdvancedStructureGeneratorClient"
+		],
+		"fabric-datagen": [
+			"structure.generator.AdvancedStructureGeneratorDataGenerator"
+		]
+	},
+	"mixins": [
+		"advanced-structure-generator.mixins.json",
+		{
+			"config": "advanced-structure-generator.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
